@@ -161,7 +161,7 @@ then
 fi
 
 echo "[+] Adding git commit"
-git add .
+git add --ignore-removal . 
 
 echo "[+] git status:"
 git status
