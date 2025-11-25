@@ -163,8 +163,10 @@ fi
 echo "[+] Adding git commit"
 git add --ignore-removal . 
 
-echo "[+] git status:"
-git status
+echo "[+] New files:"
+git diff --name-only --diff-filter=A HEAD
+echo "[+] Modified files:"
+git diff --name-only --diff-filter=M HEAD
 
 echo "[+] git diff-index:"
 # git diff-index : to avoid doing the git commit failing if there are no changes to be commit
